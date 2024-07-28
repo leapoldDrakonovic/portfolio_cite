@@ -1,0 +1,141 @@
+html, body, div{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: transparent;
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Main Elements */
+.page {
+}
+.page-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.container {
+    max-width: 1240px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+
+.header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    height: 70px;
+    border-radius: 0px 0px 10px 10px;
+}
+.link-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-link-a {
+    color: white;
+}
+
+
+
+
+/* CSS */
+.header-link {
+  appearance: none;
+  background-color: #ffffff;
+  border-width: 0;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  padding: 10px;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.header-link a {
+  color: black;
+  z-index: 2;
+}
+
+.header-link:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #EBEBEB;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+  color: black;
+  border-radius: 10px;
+}
+
+.header-link:hover:before {
+  color: black;
+
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.header-link:after {
+  color: black;
+
+  background-color: #FFFFFF;
+}
+
+.header-link a {
+  z-index: 1;
+  position: relative;
+}
+
+/* First section */
+
+
+/* Second section */
+
+
+/* Third section */
