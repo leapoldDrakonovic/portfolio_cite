@@ -21,14 +21,71 @@ tl.fromTo(text, {
 
 
 
-gsap.fromTo('.first-section-content-text-p', {
-    x: -200,
-    opacity: 0
-}, {
-    x: 0,
-    opacity: 1,
-    duration: 0.5,
-    ease: "power1.out"
 
-})
 
+
+gsap.fromTo("#title-name", 
+    { 
+        textContent: "" // Starting with an empty text
+    },
+    { 
+        textContent: "Egor Lapshin", // Ending with the full text
+        duration: 1, // Duration of typing animation
+        ease: "none", // No easing
+        onUpdate: function () {
+            // Update the text content with each frame
+            let text = this.targets()[0];
+            text.innerHTML = text.innerHTML.split('').map((char, i) => {
+                return i < this.progress() * text.textContent.length ? char : '<span aria-hidden="true"> </span>';
+            }).join('');
+        },
+        onComplete: function () {
+
+            tappingText()
+        }
+    });
+
+
+
+    function tappingText (container, text, fn){
+
+        gsap.fromTo("#title-position", 
+    { 
+        textContent: "" // Starting with an empty text
+    },
+    { 
+        textContent: "Frontend Developer", // Ending with the full text
+        duration: 1, // Duration of typing animation
+        ease: "none", // No easing
+        onUpdate: function () {
+            // Update the text content with each frame
+            let text = this.targets()[0];
+            text.innerHTML = text.innerHTML.split('').map((char, i) => {
+                return i < this.progress() * text.textContent.length ? char : '<span aria-hidden="true"> </span>';
+            }).join('');
+        },
+        onComplete: function () {
+            // Show description after typing animation is complete
+                        
+            showDesc()
+               
+        }
+    });
+    }
+
+
+
+
+    function showDesc() {  
+
+        gsap.fromTo('.first-section-content-text-p', {
+            x: -200,
+            opacity: 0
+        }, {
+            x: 0,
+            opacity: 1,
+            duration: 0.3,
+            ease: "power1.out"
+    
+        })
+    }
