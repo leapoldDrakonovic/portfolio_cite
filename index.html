@@ -1,58 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>E.L. Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="burger">
+      <div class="burger-container"></div>
+    </div>
 
     <div class="page">
-        <div class="page-container">
+      <div class="page-container">
+        <header class="header">
+          <div class="name">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="200"
+              height="70"
+              viewBox="0 0 200 100"
+            >
+              <rect width="100%" height="100%" fill="#fff" />
+              <text
+                id="logo-text"
+                x="50%"
+                y="50%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                font-family="Arial"
+                font-size="24"
+                fill="black"
+              >
+                &lt;Hello!/&gt;
+              </text>
+            </svg>
+          </div>
+          <ul class="link-list">
+            <li class="header-link">
+              <a href="" class="header-link-a">About Me</a>
+            </li>
+            <li class="header-link">
+              <a href="" class="header-link-a">Skills</a>
+            </li>
+            <li class="header-link">
+              <a href="" class="header-link-a">Expirence</a>
+            </li>
+            <li class="header-link">
+              <a href="" class="header-link-a">Contancts</a>
+            </li>
+          </ul>
+          <div class="header-burger-btn-container">
+            <div class="header-burger-btn-container-logo">Menu</div>
+            <div class="header-burger-btn-container-spans">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Section 1 -->
+        <section class="first-section">
+          <div class="container">
+            <div class="first-section-content-container">
+              <!-- Main section content text and titles -->
+              <div class="first-section-content-text">
+                <h3 class="first-section-content-text-title">Egor Lapshin</h3>
+                <h3 class="first-section-content-text-title">
+                  Frontend Developer
+                </h3>
+
+                <p class="first-section-content-text-p">
+                  <strong>Hi, there!</strong> I easily integrate into teams and
+                  workflows, quickly grasping the essence of tasks and taking an
+                  initiative approach to work. I love learning new things
+                  quickly, so I'm always open to acquiring new skills and
+                  technologies. My diligent work ethic enables me to efficiently
+                  achieve goals and deliver results.
+                </p>
+              </div>
+              <div class="first-section-content-img"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="second-section">
+          <div class="second-section-skills-title">
+            <h2>KEY SKILLS</h2>
+          </div>
+
+          <div class="slider">
+            <!-- Wrapper -->
+            <div class="slider-container">
+              <!-- Box -->
+              <div class="slider-element">
+                <div class="slider-img">
+                  <img src="https://via.placeholder.com/100" alt="Text" />
+                </div>
+              </div>
+
+              <!-- Box -->
+              <div class="slider-element">
+                <div class="slider-img">
+                  <img src="https://via.placeholder.com/100" alt="Text" />
+                </div>
+              </div>
+
+              <!-- Box -->
+              <div class="slider-element">
+                <div class="slider-img">
+                  <img src="https://via.placeholder.com/100" alt="Text" />
+                </div>
+              </div>
+
+              <!-- Box -->
+              <div class="slider-element">
+                <div class="slider-img">
+                  <img src="https://via.placeholder.com/100" alt="Text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- section 3 -->
+        <section class="third-section">
+          <div class="third-section-title">
+            <h2>Expirience</h2>
+          </div>
+
+          <div class="container third-section-container">
+            <div class="expirience-container">
+              <div class="expirience-container-text">
+                <div><strong>Dwellers LLC (Real-Estate)</strong></div>
+                <div>Frontend developer <strong>1,5 years</strong></div>
+                <div>Responsibilities:</div>
+                <ul>
+                  <li>- Developed all main webpages.</li>
+                  <li>- Created core UI elements and their behavior logic.</li>
+                  <li>
+                    - Integrated backend services with the client-side
+                    application.
+                  </li>
+                  <li>
+                    - Participated in design selection and user story
+                    development.
+                  </li>
+                  <li>- Implemented responsive website designs using CSS.</li>
+                </ul>
+              </div>
+              <div class="expirience-container-animation">
+                <div class="expirience-container-animation-title">
+                  <h4>Tech Stack</h4>
+                </div>
+              </div>
+            </div>
+            <div class="expirience-container">
+              <div class="expirience-container-text">
+                <div><strong>Dwellers LLC (Real-Estate)</strong></div>
+                <div>Frontend developer <strong>1,5 years</strong></div>
+                <div>Responsibilities:</div>
+                <ul>
+                  <li>- Developed all main webpages.</li>
+                  <li>- Created core UI elements and their behavior logic.</li>
+                  <li>
+                    - Integrated backend services with the client-side
+                    application.
+                  </li>
+                  <li>
+                    - Participated in design selection and user story
+                    development.
+                  </li>
+                  <li>- Implemented responsive website designs using CSS.</li>
+                </ul>
+              </div>
+              <div class="expirience-container-animation">
+                <div class="expirience-container-animation">
+                  <div class="expirience-container-animation-title">
+                    <h4>Tech Stack</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-section">
             
-                
-                <header class="header">
-                    <div class="container"></div>
-                    <ul class="link-list">
-                        <li class="header-link">
-                            <a href="" class="header-link-a">About Me</a>
-                        </li>
-                        <li class="header-link">
-                            <a href="" class="header-link-a">Skills</a>
-                        </li>
-                        <li class="header-link">
-                            <a href="" class="header-link-a">Expirence</a>
-                        </li>
-                        <li class="header-link">
-                            <a href="" class="header-link-a">Contancts</a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
-            <section class="first-section">
-                <div class="container">
-                    this is a section
-                </div>
-            </section>
-            <section class="second-section">
-                <div class="container">
-                    this is a section
-                </div>
-            </section>
-            <section class="third-section">
-                <div class="container">
-                    this is a section
-                </div>
-            </section>
+        </section>
 
-            <footer class="footer">
-                this a footer
-            </footer>
-
-        </div>
+        <footer class="footer">this a footer</footer>
+      </div>
     </div>
-    
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script type="module" src="./src/script/index.js"></script>
+    <!-- <script type="module" src="./src/script/slider.js"></script> -->
+  </body>
 </html>
