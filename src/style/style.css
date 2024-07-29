@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic+Coding:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 html,
 body,
 div {
@@ -7,6 +9,10 @@ div {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+/* 
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-style: normal; */
 }
 
 a {
@@ -206,28 +212,44 @@ body {
 .first-section {
   margin-top: 20px;
   height: calc(100vh - 70px);
+  position: relative;
 }
+
+
+.svg-main-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: none;
+    display: none;
+}
+
+
+
+
+#title-position {
+    font-size: 30px;
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
 
 .first-section-content-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  overflow: hidden;
+
 }
 .first-section-content-text {
 }
 
-.first-section-content-text-title:first-child {
-  font-size: 30px;
-  background-image: linear-gradient(90deg, #e3535d, #2aa5a0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .first-section-content-text-title {
-  font-size: 30px;
-  background-image: linear-gradient(90deg, #ff1aba, #9dedeb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-size: 30px;
+
 }
 .first-section-content-img {
   flex-basis: 50%;
@@ -236,9 +258,22 @@ body {
 
 .first-section-content-text-p {
     opacity: 0;
+    transform: translateX(1000px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+
+#citizen {
+    opacity: 0;
+    transform: translateX(1000px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#current {
+    opacity: 0;
+    transform: translateX(2000px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
 /* Second section */
 
