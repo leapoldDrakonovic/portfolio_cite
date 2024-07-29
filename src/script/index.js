@@ -194,11 +194,13 @@ gsap.to(".second-section", {
 gsap.to(".third-section", {
     scrollTrigger: {
       trigger: ".third-section", // Триггер для запуска анимации
-      start: "top 80%", // Начало анимации (когда верх секции достигает 80% высоты окна)
-      end: "top 30%", // Конец анимации (когда верх секции достигает 30% высоты окна)
+      start: "top center", // более универсальные значения
+      end: "top top", // Конец анимации (когда верх секции достигает 30% высоты окна)
       toggleActions: "play none none reverse", // Действия анимации
     },
     visibility: "visible",
     opacity: 1, // Изменение прозрачности
     duration: 0.4, // Продолжительность анимации в секундах
   });
+
+  ScrollTrigger.refresh();
