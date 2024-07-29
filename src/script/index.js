@@ -51,24 +51,20 @@ gsap.fromTo("#title-name",
 
         gsap.fromTo("#title-position", 
     { 
-        textContent: "" // Starting with an empty text
+        textContent: "" 
     },
     { 
-        textContent: "Frontend Developer", // Ending with the full text
-        duration: 1, // Duration of typing animation
-        ease: "none", // No easing
+        textContent: "{Frontend Developer}", 
+        duration: 1, 
+        ease: "none",
         onUpdate: function () {
-            // Update the text content with each frame
             let text = this.targets()[0];
             text.innerHTML = text.innerHTML.split('').map((char, i) => {
                 return i < this.progress() * text.textContent.length ? char : '<span aria-hidden="true"> </span>';
             }).join('');
         },
-        onComplete: function () {
-            // Show description after typing animation is complete
-                        
+        onComplete: function () {                        
             showDesc()
-               
         }
     });
     }
@@ -79,13 +75,36 @@ gsap.fromTo("#title-name",
     function showDesc() {  
 
         gsap.fromTo('.first-section-content-text-p', {
-            x: -200,
-            opacity: 0
+            x: 1000,
+            opacity: 0,
         }, {
             x: 0,
             opacity: 1,
             duration: 0.3,
-            ease: "power1.out"
-    
+            ease: "power1.out",
+            onComplete: function() {
+
+                gsap.fromTo('#citizen', {
+                    x: 1000,
+                    opacity: 0,
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.3,
+                    ease: "power1.out",
+                })
+
+                gsap.fromTo('#current', {
+                    x: 2000,
+                    opacity: 0,
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.3,
+                    ease: "power1.out",
+                })
+
+
+            }
         })
     }
