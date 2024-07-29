@@ -421,6 +421,7 @@ body {
 .third-section {
     margin-top: 40px;
     opacity: 0;
+    visibility: hidden;
     transition: opacity 0.4s ;
 
 }

@@ -198,6 +198,7 @@ gsap.to(".third-section", {
       end: "top 30%", // Конец анимации (когда верх секции достигает 30% высоты окна)
       toggleActions: "play none none reverse", // Действия анимации
     },
+    visibility: "visible",
     opacity: 1, // Изменение прозрачности
     duration: 0.4, // Продолжительность анимации в секундах
   });
