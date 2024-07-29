@@ -1,30 +1,37 @@
-const text = document.getElementById('logo-text');
-const tl = gsap.timeline({ repeat: 0, yoyo: true });
 
 
 
-
-tl.fromTo(text, {
-    opacity: 0,
-    skewX: -20,
-    x: -200,
-    fontSize: 30,
-}, {
-    opacity: 1,
-    x: -50,
-    rotation: 0,
-    duration: 0.3,
-    fontSize: 30,
-    fontWeight: "bold",
-    ease: "power1.out"
-}) ;
+document.addEventListener("DOMContentLoaded", ()=>{
+    logoAnimation()
+    titleAnimation()
+})
 
 
+function logoAnimation() {
+    const text = document.getElementById('logo-text');
+    const tl = gsap.timeline({ repeat: 0, yoyo: true });
+    tl.fromTo(text, {
+        opacity: 0,
+        skewX: -20,
+        x: -200,
+        fontSize: 30,
+    }, {
+        opacity: 1,
+        x: -50,
+        rotation: 0,
+        duration: 0.3,
+        fontSize: 30,
+        fontWeight: "bold",
+        ease: "power1.out"
+    }) ;
+    
+}
 
 
+function titleAnimation () {
 
 
-gsap.fromTo("#title-name", 
+    gsap.fromTo("#title-name", 
     { 
         textContent: "" // Starting with an empty text
     },
@@ -68,6 +75,9 @@ gsap.fromTo("#title-name",
         }
     });
     }
+}
+
+
 
 
 
@@ -107,4 +117,62 @@ gsap.fromTo("#title-name",
 
             }
         })
+    }
+
+
+
+
+    const burgerBtn = document.querySelector(".header-burger-btn-container")
+    const burger = document.querySelector(".burger")
+
+
+    burgerBtn.addEventListener("click", ()=> {
+
+
+        burger.classList.toggle("visible")
+
+
+        const page = document.querySelector('.page')
+        page.classList.toggle('burger-active')
+
+
+        const burgerBtnTextContainer = burgerBtn.querySelector('.header-burger-btn-container-logo')
+        const burgerBtnLines = burgerBtn.querySelector(".header-burger-btn-container-spans")
+
+
+
+        const body = document.querySelector("body")
+        if (burgerBtnTextContainer.innerText == "Menu") {
+            burgerBtnTextContainer.style.margin = "0 auto"
+            burgerBtnTextContainer.innerText = "Close"
+            body.style.overflowY = 'hidden'
+            burgerBtnLines.style.display = "none"
+        } else {
+            burgerBtnTextContainer.innerHTML = "Menu"
+            body.style.overflowY = 'scroll'
+            burgerBtnLines.style.display = "flex"
+
+        }
+        setTimeout(()=>{
+            burgerLinksAnimation()
+        }, 200)
+    })
+
+
+
+    
+
+    function burgerLinksAnimation () {
+        
+        const burgerList = document.querySelector(".burger-link-list")
+        gsap.fromTo(burgerList, {
+            opacity: 0,
+            x: -1000,
+        }, {
+            opacity: 1,
+            x: 0,
+            duration: 0.5,
+            ease: 'power1.out'
+        })
+
     }
