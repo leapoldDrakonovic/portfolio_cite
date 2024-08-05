@@ -383,7 +383,7 @@ body {
 }
 
 
-@media (width < 600px) {
+@media (width < 630px) {
 
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
