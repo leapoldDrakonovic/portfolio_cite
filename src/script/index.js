@@ -194,8 +194,8 @@ gsap.to(".second-section", {
 gsap.to(".third-section", {
     scrollTrigger: {
       trigger: ".third-section", // Триггер для запуска анимации
-      start: "top center", // более универсальные значения
-      end: "top top", // Конец анимации (когда верх секции достигает 30% высоты окна)
+      start: "top 80%", // Начало анимации (когда верх секции достигает 80% высоты окна)
+      end: "top 30%",  // Конец анимации (когда верх секции достигает 30% высоты окна)
       toggleActions: "play none none reverse", // Действия анимации
     },
     visibility: "visible",
@@ -204,3 +204,40 @@ gsap.to(".third-section", {
   });
 
   ScrollTrigger.refresh();
+
+
+  gsap.fromTo(".footer", {
+    scrollTrigger: {
+        trigger: ".footer", // Триггер для запуска анимации
+        start: "top 80%", // Начало анимации (когда верх секции достигает 80% высоты окна)
+        end: "top 30%",  // Конец анимации (когда верх секции достигает 30% высоты окна)
+        toggleActions: "play none none reverse", // Действия анимации
+      },
+      textContent: "",
+      visibility: "visible",
+      opacity: 1, // Изменение прозрачности
+      duration: 0.4,
+      textContent: '' // Продолжительность анимации в секундах
+    }, {
+        textContent: "{Have a nice day!}",
+          duration: 1,
+          ease: "none",
+          onUpdate: function () {
+            let text = this.targets()[0];
+            text.innerHTML = text.innerHTML
+              .split("")
+              .map((char, i) => {
+                return i < this.progress() * text.textContent.length
+                  ? char
+                  : '<span aria-hidden="true"> </span>';
+              })
+              .join("");
+          },
+
+    })
+
+
+
+    function smoothScroll (name) {
+      
+    }

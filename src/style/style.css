@@ -42,6 +42,7 @@ body {
 /* Burger */
 
 .burger {
+    display: none;
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -83,12 +84,13 @@ body {
 
 
 .header-burger-btn-container {
+
+
   width: 90px;
   height: 30px;
   border: 2px solid black;
   margin-left: auto;
   margin-right: 30px;
-  display: flex;
   flex-direction: row;
   align-items: center;
   padding: 5px;
@@ -97,7 +99,8 @@ body {
 }
 
 .header-burger-btn-container {
-    display: flex;
+    display: none;
+
     flex-direction: row;
     gap: 7px;
     width: 90px;
@@ -272,10 +275,7 @@ body {
   position: relative;
 }
 
-/* TODO убери */
-.link-list {
-  display: none;
-}
+
 
 /* First section */
 .first-section {
@@ -366,14 +366,32 @@ body {
     background-color: rgb(243, 243, 243);
     padding: 10px 20px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+
     margin: 0 auto;
-    align-items: center;
     gap: 15px;
+    grid-template-columns: repeat(8, 1fr);
 
 }
+
+
+@media (width < 900px) {
+
+  .skills-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+@media (width < 500px) {
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
 .skills-element {
     border: 1px solid #fff;
 
@@ -439,27 +457,68 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
 }
 .expirience-container {
-    display: flex;
+    display: grid;
+    border: 1px solid black;
 
+    grid-template-columns: repeat(1, 1fr);
 }
 
-.expirience-container:last-child {
-    display: flex;
-    flex-direction: row-reverse;
-}
+
 .expirience-container-text {
-    flex-basis: 50%;
     text-align: justify;
+    border: 1px solid black;
+
 }
 .expirience-container-animation {
-    flex-basis: 50%;
+    border: 1px solid black;
+
 
 }
 .expirience-container-animation-title {
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align: center;
+
 }
+
 
 /* Adaptive */
 
+@media (max-width: 780px) {
+
+    .burger {
+        display: block;
+    }
+
+    .header-burger-btn-container {
+        display: flex;
+    }
+
+    .link-list {
+        display: none;
+    }
+
+}
+
+
+
 /* Dark mode */
+
+
+.footer {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #f4f4f4;
+    border-top: 2px solid black;
+
+
+    font-size: 20px;
+    font-weight: bold;
+}
