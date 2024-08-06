@@ -16,12 +16,8 @@ add:
 
 # Коммит с сообщением
 commit:
-	@if git diff-index --quiet HEAD --; then \
-		echo "No changes to commit."; \
-	else \
-		echo "Committing changes with message: '$(COMMIT_MESSAGE)'"; \
-		git commit -m "$(COMMIT_MESSAGE)"; \
-	fi
+	@git commit -m "$(COMMIT_MESSAGE)"; \
+
 
 # Push изменений в текущую ветку
 push:
