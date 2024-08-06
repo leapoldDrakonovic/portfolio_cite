@@ -456,12 +456,11 @@ body {
 .container.third-section-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 70px;
 
 }
 .expirience-container {
     display: grid;
-    border: 1px solid black;
 
     grid-template-columns: repeat(1, 1fr);
 }
@@ -469,20 +468,45 @@ body {
 
 .expirience-container-text {
     text-align: justify;
-    border: 1px solid black;
 
 }
 .expirience-container-animation {
-    border: 1px solid black;
+    width: 100%;
 
 
 }
 .expirience-container-animation-title {
-    border: 1px solid black;
     margin: 0 auto;
     text-align: center;
 
 }
+
+
+.expirience-container-animation-imgs  {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+  align-items: center;
+}
+
+.img-tech-container {
+  width: 60%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 15px;
+ }
+
+
+ .img-tech-container  img {
+  width: 200px;
+  object-fit: contain;
+  height: 130px;
+ }
 
 
 /* Adaptive */
