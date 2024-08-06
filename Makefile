@@ -1,28 +1,25 @@
 BRANCH_NAME=$(shell git rev-parse --abbrev-ref HEAD)
 COMMIT_MESSAGE ?= 'add: new'
 
-# .PHONY говорит make, что цель не является файлом
 .PHONY: all status add commit push pull
 
-all: status add commit push
+all: status add commit push deploy
 
-# Проверка статуса git
 status:
 	@git status
 
-# Добавление изменений в stage
 add:
 	@git add .
 
-# Коммит с сообщением
 commit:
-	@git commit -m "$(COMMIT_MESSAGE)"; \
+	@git commit -m "$(COMMIT_MESSAGE)"
 
 
-# Push изменений в текущую ветку
 push:
 	@git push origin -u $(BRANCH_NAME)
 
-# Pull последних изменений с удаленного репозитория
 pull:
 	@git pull origin $(BRANCH_NAME)
+
+deploy:
+	@npm run deploy
