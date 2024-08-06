@@ -1,5 +1,5 @@
 BRANCH_NAME=$(shell git rev-parse --abbrev-ref HEAD)
-COMMIT_MESSAGE ?= "add: new things by make file"
+COMMIT_MESSAGE ?= 'add: new'
 
 # .PHONY говорит make, что цель не является файлом
 .PHONY: all status add commit push pull
