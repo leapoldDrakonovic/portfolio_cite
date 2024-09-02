@@ -1,0 +1,57 @@
+
+/* Section 1 */
+
+.first_section {
+    height: 600px;
+    position: relative;
+  }
+  
+  .first_section_container {
+  }
+  
+  .content_container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 22px;
+    margin-left: 20px;
+  }
+  
+  .title {
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 8px;
+  
+    background: rgb(246, 255, 218);
+  
+    padding: 13px 61px 13px 61px;
+  
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0px;
+    text-align: center;
+  
+    margin-bottom: 30px;
+  }
+  
+  .description {
+    text-align: justify;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  
+  .img_container {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+  }
+  
+  .img {
+  }
+  

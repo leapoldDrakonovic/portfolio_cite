@@ -1,0 +1,13 @@
+.cards_container {
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-top: 100px;
+}

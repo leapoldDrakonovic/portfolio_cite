@@ -1,0 +1,16 @@
+
+.section_title {
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    color: rgb(0, 0, 0);
+font-size: 40px;
+font-weight: 400;
+line-height: 50px;
+letter-spacing: 0px;
+text-align: center;
+}

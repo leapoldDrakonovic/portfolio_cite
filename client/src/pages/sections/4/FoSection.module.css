@@ -1,0 +1,16 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+    padding: 53px 0;
+}
+
+.section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
