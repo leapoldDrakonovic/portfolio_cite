@@ -1,4 +1,3 @@
-import React from 'react'
 import style from "./Title.module.css"
 import ItemContainer from '../container/ItemContainer'
 
@@ -13,7 +12,6 @@ const Title = ({title}: ITitleProps) => {
     <h2 className={style.section_title}>
         {title}
     </h2>
-
     </ItemContainer>
     </>
   )

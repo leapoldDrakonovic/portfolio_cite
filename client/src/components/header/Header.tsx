@@ -1,9 +1,7 @@
-import React from 'react'
 import style from "./header.module.css"
 
-type Props = {}
 
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <header className={style.header}>
       <nav className={style.navigation}>

@@ -1,11 +1,9 @@
-import React from 'react'
 import style from "./FSection.module.css"
 import ItemContainer from '../../../components/container/ItemContainer'
 
 
-type Props = {}
 
-const FSection = (props: Props) => {
+const FSection = () => {
   return (
     <>
     <ItemContainer>

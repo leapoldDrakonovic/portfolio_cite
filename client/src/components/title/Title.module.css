@@ -1,11 +1,11 @@
 
 .section_title {
     text-align: center;
-    height: 50px;
+    margin: 0;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 
     color: rgb(0, 0, 0);
 font-size: 40px;

@@ -1,4 +1,3 @@
-import React from 'react'
 import style from "./WorkCard.module.css"
 import ItemContainer from '../../../../../components/container/ItemContainer'
 

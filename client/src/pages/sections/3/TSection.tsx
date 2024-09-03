@@ -1,14 +1,9 @@
-import React from 'react'
 import style from "./TSection.module.css"
 import Title from '../../../components/title/Title'
 import SkillCard from './components/SkillCard/SkillCard'
 
 
-interface ITSectionProps {
-
-}
-
-const TSection = (props: ITSectionProps) => {
+const TSection = () => {
   return (
     <div className={style.section}>
         <Title title='Key Skills'/>

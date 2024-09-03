@@ -3,9 +3,8 @@ import Title from '../../../components/title/Title'
 import ItemContainer from '../../../components/container/ItemContainer'
 import Link from './components/Link/Link'
 
-type Props = {}
 
-const FoSection = (props: Props) => {
+const FoSection = () => {
   return (
     <div className={style.section}>
       <Title title="Contacts" />
