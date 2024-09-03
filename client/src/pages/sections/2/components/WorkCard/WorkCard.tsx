@@ -8,7 +8,9 @@ interface IItemProps {
 
 
 interface IWorkCardProps {
-    
+    title: string,
+    position: string,
+    tech: string[]
 }
 
 const Item = ({text}: IItemProps) => {
@@ -19,23 +21,23 @@ const Item = ({text}: IItemProps) => {
     )
 }
 
-const WorkCard = (props: IWorkCardProps) => {
+const WorkCard = ({title, position, tech}: IWorkCardProps) => {
   return (
         <ItemContainer>
     <div className={style.work_card}>
             <h4 className={style.job_title}>
-                DLL Dwellers
+                {title}
             </h4>
             <div className={style.job_position}>
-                Frontend Developer
+                {position}
             </div>
             <div className={style.tech_title}>
                 Tech Stack:
             </div>
             <ul className={style.tech_list}>
-                {Array.from({length: 4}).map((el, i) => {
+                {tech?.map((el, i) => {
                     return (
-                        <Item key={i} text={'123'}/>
+                        <Item key={i} text={el}/>
                     )
                 })}
             </ul>

@@ -9,6 +9,7 @@ import FSection from "./sections/1/FSection";
 import SSection from "./sections/2/SSection";
 import TSection from "./sections/3/TSection";
 import FoSection from "./sections/4/FoSection";
+import Footer from "../components/footer/Footer";
 
 type Props = {};
 
@@ -21,6 +22,8 @@ const Page = (props: Props) => {
         <SSection/>
         <TSection/>
         <FoSection/>
+
+        <Footer/>
       </Container>
     </div>
   );
