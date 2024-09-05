@@ -13,10 +13,19 @@ const Page = () => {
     <div className={style.page}>
       <Container>
         <Header />
+        <section id="about">
         <FSection />
+        </section>
+        <section id="exp">
         <SSection />
+        </section>
+        <section id="skill">
         <TSection />
+        </section>
+        <section id="contacts">
         <FoSection />
+
+        </section>
 
         <Footer />
       </Container>

@@ -6,6 +6,8 @@
     flex-direction: column;
     /* temporary */
     gap: 20px;
+    padding: 5px;
+    position: relative;
 }
 
 

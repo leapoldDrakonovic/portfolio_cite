@@ -2,3 +2,10 @@
     margin-top: 100px;
     margin-bottom: 50px;
 }
+
+@media (width < 778px) {
+    .footer {
+        margin-top: 50px;
+        margin-bottom: 150px;
+    }
+}

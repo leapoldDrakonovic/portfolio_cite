@@ -3,13 +3,15 @@
  background-color: #fff;
  border-radius: 8px;  
  height: 80px;
- position: sticky;
 border: 2px solid black;
  margin-top: 20px;
  display: flex;
  justify-content: end;
  padding:0 55px; 
+ transition: all 0.3s ease;
 }
+
+
 
 .navigation {
 
@@ -57,3 +59,18 @@ border: 2px solid transparent;
         
     }
 } */
+
+
+@media (width < 778px) {
+    .header {
+        position: fixed;
+        box-shadow: none;
+        border-radius: 8px 8px 0px 0px;
+        border-bottom: 0;
+        justify-content: center;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 0;
+        z-index: 200;
+    }
+}

@@ -9,7 +9,7 @@ const SkillCard = ({ path }: ISkillCardProps) => {
   return (
     <ItemContainer>
       <div className={style.skill_card}>
-        <img className={style.img} src={path} alt="" />
+        <img className={style.img} src={path} alt="Skill" />
       </div>
     </ItemContainer>
   );

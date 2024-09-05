@@ -8,12 +8,12 @@ const TSection = () => {
     <div className={style.section}>
         <Title title='Key Skills'/>
         <div className={style.cards_container}>
-          <SkillCard path='/public/docker-img.png'/>
-          <SkillCard path='/public/git-img.png'/>
-          <SkillCard path='/nginx-img.jpg'/>
-          <SkillCard path='/ts-img.png'/>
-          <SkillCard path='/react-img.png'/>
-          <SkillCard path='/nodejs-image.png'/>
+          <SkillCard path='/docker-img.png' />
+          <SkillCard path='/git-img.png' />
+          <SkillCard path='/nginx-img.jpg' />
+          <SkillCard path='/ts-img.png' />
+          <SkillCard path='/react-img.png' />
+          <SkillCard path='/nodejs-image.png' />
         </div>
     </div>
   )
