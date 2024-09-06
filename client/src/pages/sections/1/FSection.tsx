@@ -4,6 +4,10 @@ import ItemContainer from '../../../components/container/ItemContainer'
 
 
 const FSection = () => {
+
+  const baseURL = import.meta.env.VITE_BASE_URL || "";
+
+
   return (
     <>
     <ItemContainer>
@@ -32,7 +36,7 @@ const FSection = () => {
                 </div>
               </div>
               <div className={style.img_container}>
-                <img className={style.img} src="/portrait.png" alt="" />
+                <img className={style.img} src={`${baseURL}/portrait.png`} alt="" />
               </div>
             </div>
           </div>

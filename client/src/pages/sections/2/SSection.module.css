@@ -8,3 +8,20 @@
   grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   gap: 70px;
 }
+
+
+@media (width < 546px) {
+  .cards_container {
+
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+  }
+}
+
+@media (width < 404px) {
+  .cards_container {
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+  }
+}

@@ -14,3 +14,11 @@ line-height: 50px;
 letter-spacing: 0px;
 text-align: center;
 }
+
+@media (width < 556px) {
+    .section_title {
+
+    font-size: 32px;
+
+    }
+}

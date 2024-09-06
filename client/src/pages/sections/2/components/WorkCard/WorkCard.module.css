@@ -99,6 +99,10 @@
   .job_title {
     font-size: 20px;
     padding: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .job_position {
@@ -107,5 +111,9 @@
 
   .tech_item {
     font-size: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
