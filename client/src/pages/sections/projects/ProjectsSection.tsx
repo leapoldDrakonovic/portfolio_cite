@@ -9,18 +9,20 @@ interface iProjectItemProps {
     image?: string;
     link?: string;
     tech: string[];
-    status: string
+    status: string;
   };
 }
 
 const ProjectItem = ({ data }: iProjectItemProps) => {
+  const baseURL = import.meta.env.VITE_BASE_URL || "";
+
   return (
     <div className="">
       <ItemContainer>
         <div className="p-4 flex itemc-center flex-col">
           <div className="flex items-center justify-center">
             <img
-              src="/portfolio_cite/public/ts-img.png"
+              src={`${baseURL}/${data.image}`}
               alt="Project Image"
               className="object-contain"
             />
@@ -30,7 +32,14 @@ const ProjectItem = ({ data }: iProjectItemProps) => {
             {data.title}{" "}
           </h3>
           <div className="mt-4">
-            Status: {data.status}
+            Status:{" "}
+            <span
+              className={
+                data.status === "Open" ? `text-green-600` : `text-red-700`
+              }
+            >
+              {data.status}
+            </span>
           </div>
           <p className="mt-4 mb-4">{data.description}</p>
           <div className="flex gap-4 flex-wrap w-full justify-start">
@@ -45,7 +54,7 @@ const ProjectItem = ({ data }: iProjectItemProps) => {
 
           <a
             href={`${data.link}`}
-            className="hover:bg-blue-500 hover:text-white easy-linear duration-200 text-2xl text-center mt-2 rounded-[8px] border-blue-500 border ml-auto mr-auto w-[100px] text-blue-500"
+            className="hover:bg-blue-500 hover:text-white easy-linear duration-200 text-2xl text-center mt-4 rounded-[8px] border-blue-500 border ml-auto mr-auto w-[100px] text-blue-500"
           >
             Git
           </a>
