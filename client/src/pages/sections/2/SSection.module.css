@@ -25,3 +25,14 @@
     gap: 50px;
   }
 }
+
+@media (width < 600px) {
+  .section {
+    margin-top: 50px;
+  }
+
+  .cards_container {
+    margin-top: 20px;
+
+  }
+}

@@ -14,3 +14,12 @@
     flex-wrap: nowrap;
     gap: 50px;
 }
+
+@media (width < 600px) {
+    .section {
+      margin-top: 50px;
+      gap: 20px;
+    }
+  
+    
+  }
