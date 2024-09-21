@@ -64,7 +64,8 @@ const ProjectItem = ({ data }: iProjectItemProps) => {
             href={`${data.link}`}
             className="hover:bg-blue-500 hover:text-white easy-linear duration-200 text-2xl text-center mt-4 rounded-[8px] border-blue-500 border ml-auto mr-auto w-[100px] text-blue-500"
           >
-            Git
+            {data.status === "Private" ? "Not" : "Git"}
+          
           </a>
         </div>
       </ItemContainer>
