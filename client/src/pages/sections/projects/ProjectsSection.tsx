@@ -1,6 +1,7 @@
 import ItemContainer from "../../../components/container/ItemContainer";
 import Title from "../../../components/title/Title";
 import { projects } from "../../../../data/data";
+import { motion } from "framer-motion";
 
 interface iProjectItemProps {
   data: {
@@ -17,7 +18,13 @@ const ProjectItem = ({ data }: iProjectItemProps) => {
   const baseURL = import.meta.env.VITE_BASE_URL || "";
 
   return (
-    <div className="">
+    <motion.div
+    whileHover={{scale: 1.01}}
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    >
+
       <ItemContainer>
         <div className="p-4 flex itemc-center flex-col">
           <div className="flex items-center justify-center">
@@ -25,6 +32,7 @@ const ProjectItem = ({ data }: iProjectItemProps) => {
               src={`${baseURL}/${data.image}`}
               alt="Project Image"
               className="object-contain"
+              loading="lazy"
             />
           </div>
           <h3 className="text-center mt-4 font-bold text-3xl">
@@ -60,7 +68,7 @@ const ProjectItem = ({ data }: iProjectItemProps) => {
           </a>
         </div>
       </ItemContainer>
-    </div>
+    </motion.div>
   );
 };
 
